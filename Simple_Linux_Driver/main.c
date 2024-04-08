@@ -28,5 +28,10 @@ static void simple_driver_exit(void)
 }
 
 /*===============================================================================================*/
+//> init_module() loads an ELF image into kernel space, > performs any
+//necessary symbol relocations, > initializes module parameters to
+//values provided by the caller, > and then runs the module's init
+//function.  This system call requires privilege.
+// Ref: https://www.man7.org/linux/man-pages/man2/init_module.2.html
 module_init(simple_driver_init);
 module_exit(simple_driver_exit);
